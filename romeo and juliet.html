@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romeo and Juliet - Act 1 Scene 3</title>
+    <style>
+        @view-transition {
+            navigation: auto;
+        }
+
+        ::view-transition-old(root) {
+            animation: fadeOut 0.5s forwards;
+        }
+
+        ::view-transition-new(root) {
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            box-sizing: border-box;
+            color: rgb(249, 246, 246);
+            font-family: Verdana, sans-serif;
+            background-color: #f6f2f2;
+            background-image: url("juliet.gif");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .sun-button {
+            display: inline-block;
+        }
+
+        .sun-button img {
+            display: block;
+            width: 1300px;
+            height: 650px;
+            position: 50px;
+        }
+
+        .sun-image img {
+            display: block;
+            width: 1300px;
+            height: 650px;
+            position: 50px;
+        }
+
+        #black-screen {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: #000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s;
+        }
+
+        #black-screen.visible {
+            opacity: 1;
+        }
+    </style>
+    <script src="transition.js" defer></script>
+</head>
+
+<body>
+    <a class="sun-button" href="Act 1 Scene 3.html">
+        <img id="sun-img" src="sun chilling.gif" alt="Sun">
+    </a>
+    <div id="black-screen" aria-hidden="true"></div>
+
+    <p style="color: #ffffff;">Click the sun to transition to Act 1 Scene 3.</p>
+</body>
+
+</html>
